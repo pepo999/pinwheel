@@ -221,7 +221,8 @@ opacity: 0.5;
         opacity: 1;
     }
 
-    body{
-        font-size: 100px;
+    h1{
+        font-size: 17vw;
+        
     }   
     }
