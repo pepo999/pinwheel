@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -5,71 +7,142 @@
 html, body{
     margin: 0px;
     padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
 }
 
 
+h1{
+    font-family: 'Monoton', cursive;
+    font-size: 2.5vw;
+}
+
 .grid-container{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 100vw;
     height: 100vw;
     display: grid;
-    grid-template-columns: repeat(6, 1fr) ;
+    /* grid-template-columns: repeat(6, 1fr) ;
     grid-template-rows: repeat(6, 1fr) ;
     grid-template-areas:
-    ". . . . . ."
+    ". . . . . . "
     ". . . a1 . ." 
     ". a4 a4 a1. ." 
     ". . a3 a2 a2." 
     ". . a3 . . ." 
-    ". . . . . .";
+    ". . . . . ."; */
+    grid-template-columns: repeat(5, 1fr) ;
+    grid-template-rows: repeat(5, 1fr) ;
+    grid-template-areas:
+    ". . . c1 .  "
+    "c4 a4 a4 a1 . " 
+    ". a3 c a1 ." 
+    ". a3 a2 a2 c2" 
+    ". c3 . . . " ;
+    background-color: #AD91A3;
+    background-image: url(./assets/yellowsubmarinecircle.png);
+    background-position-x: left 42vw;
+    background-position-y: top 41.5vw;
+    background-repeat: no-repeat;
+    background-size: 16vw;
 }
 
 .arm{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-items: stretch;
+    background-color:#F0C987 ;
+    opacity: 0.5;
+    overflow: hidden;
+    
 }
+.arm:hover{
+    opacity: 1;
+}
+
+.centro{
+grid-area: c;
+background-color: #F0C987;
+opacity: 0.5;
+}
+        .centro1{
+    grid-area: c1;
+    background-color: #F0C987;
+    opacity: 0.5;
+    } 
+    .centro2{
+        grid-area: c2;
+        background-color: #F0C987;
+        opacity: 0.5;
+        } 
+
+        .centro3{
+    grid-area: c3;
+    background-color: #F0C987;
+    opacity: 0.5;
+    } 
+    .centro4{
+        grid-area: c4;
+        background-color: #F0C987;
+        opacity: 0.5;
+        } 
+    
 
 .a1{
     grid-area: a1;
     display: flex;
     flex-direction: column;
+    border-bottom-right-radius: 50vw;
+    padding: 0px;
+
 }
 
 .a2{
     grid-area: a2;
     display: flex;
     flex-direction: row-reverse;
+    border-bottom-left-radius: 50vw;
+    
 }
 
 .a3{
     grid-area: a3;
     display: flex;
     flex-direction: column-reverse;
+    border-top-left-radius: 50vw;
+
 }
 
 .a4{
     grid-area: a4;
     display: flex;
+    border-top-right-radius: 50vw;
 }
 
 .arm-img{
-    width: 16.66vw;
-    height: 16.66vw;
-    border: 1px solid green;
+    width: 20vw;
+    height: 20vw;
+    /* border: 1px solid green; */
 }
 
 .arm-text{
-    width: 16.66vw;
-    height: 16.66vw;
-    border: 1px solid yellow;
+    /* width: 16.66vw; */
+    /* height: 16.66vw; */
+    /* border: 1px solid yellow; */
     display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 8px;
+    flex-basis: 0;
+    justify-content: space-around;
+    padding:3.5vw;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 1000px) {
     .grid-container{
+        gap: 2vw;
         width: 100vw;
         height: 200vw;
         grid-template-columns: repeat(2, 1fr);
@@ -78,7 +151,8 @@ html, body{
             "a4 a4"
             "a3 a1"
             "a3 a1"
-            "a2 a2"
+            "a2 a2"; 
+            background-image: none; 
     }
 
     .arm-img{
@@ -90,9 +164,31 @@ html, body{
         width: 50vw;
         height: 50vw;
     }
+    
+    .arm{
+        opacity: 1;
+        border-top-right-radius: 0vw;
+        border-top-left-radius: 0vw;
+        border-bottom-right-radius: 0vw;
+        border-bottom-left-radius: 0vw;
+    }
+
+    .arm-text{
+        width: 16.66vw;
+        height: 16.66vw;
+        /* border: 1px solid yellow; */
+        display: flex;
+        /* flex-basis: 0; */
+        justify-content: center;
+    }
+    .centro, .centro1, .centro2, .centro3, .centro4{
+        background-color: transparent;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+
+
     .grid-container{
         width: 100vw;
         height: 800vw;
@@ -103,10 +199,11 @@ html, body{
             "a1"
             "a2"
             "a2"
-            "a3"
-            "a3"
             "a4"
-            "a4";
+            "a4"
+            "a3"
+            "a3";
+            background-image: none;
     }
 
     .arm-img{
@@ -121,5 +218,10 @@ html, body{
     
     .arm{
         flex-direction: column;
+        opacity: 1;
     }
-}
+
+    body{
+        font-size: 100px;
+    }   
+    }
