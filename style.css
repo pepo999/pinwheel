@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.grid-container{
+    border: 1px solid green;
+    width: 100vw;
+    height: 100vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) ;
+    grid-template-rows: repeat(6, 1fr) ;
+    grid-template-areas:
+    ". . . . . ."
+    ". . . a1 . ." 
+    ". a4 a4 a1. ." 
+    ". . a3 a2 a2." 
+    ". . a3 . . ." 
+    ". . . . . .";
+}
+
+.arm{
+    border: 1px solid red;
+    justify-items: stretch;
+}
+
+.a1{
+    grid-area: a1;
+    display: flex;
+    flex-direction: column;
+}
+
+.a2{
+    grid-area: a2;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.a3{
+    grid-area: a3;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.a4{
+    grid-area: a4;
+    display: flex;
+}
+
+.arm-img{
+    width: 16.66vw;
+    height: 16.66vw;
+    border: 1px solid green;
+}
+
+.arm-text{
+    width: 16.66vw;
+    height: 16.66vw;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .grid-container{
+        width: 100vw;
+        height: 200vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "a4 a4"
+            "a3 a1"
+            "a3 a1"
+            "a2 a2"
+    }
+
+    .arm-img{
+        width: 50vw;
+        height: 50vw;
+    }
+    
+    .arm-text{
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container{
+        width: 100vw;
+        height: 800vw;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas: 
+            "a1"
+            "a1"
+            "a2"
+            "a2"
+            "a3"
+            "a3"
+            "a4"
+            "a4";
+    }
+
+    .arm-img{
+        width: 100vw;
+        height: 100vw;
+    }
+    
+    .arm-text{
+        width: 100vw;
+        height: 100vw;
+    }
+    
+    .arm{
+        flex-direction: column;
+    }
+}
