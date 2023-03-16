@@ -152,16 +152,34 @@ span {
     
 }
 
-.arm-text {
+ .arm-text1, .arm-text2, .arm-text3, .arm-text4 {
     /* width: 16.66vw; */
     /* height: 16.66vw; */
     /* border: 1px solid yellow; */
     display: flex;
     flex-basis: 0;
     justify-content: space-around;
-    /* overflow: hidden; */
-    padding: 3.5vw;
-    rotate: 90deg; 
+    padding: 3.5vw; 
+}
+
+.arm-text1{
+    rotate: 90deg;
+    margin-right: 12vw;
+    margin-top: 3.5vw;
+}
+
+.arm-text2{
+    margin-right: 2vw;
+}
+
+.arm-text3{
+    rotate: 270deg;
+    margin-bottom: 2.5vw;
+    margin-left: 10vw;
+}
+
+.arm-text4{
+
 }
 
 
