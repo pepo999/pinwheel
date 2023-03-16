@@ -281,9 +281,12 @@ span {
         height: 100vw;
     }
 
-    .arm-text {
+    .arm-text1, .arm-text2, .arm-text3, .arm-text4 {
         width: 100vw;
         height: 100vw;
+        font-size: 10vw;
+        margin: 0px;
+        padding: 0px;
     }
 
     .arm {
