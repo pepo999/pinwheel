@@ -73,22 +73,26 @@ opacity: 0.5;
     grid-area: c1;
     background-color: #F0C987;
     opacity: 0.5;
+    border-top-left-radius: 50vw;
     } 
     .centro2{
         grid-area: c2;
         background-color: #F0C987;
         opacity: 0.5;
+        border-top-right-radius: 50vw;
         } 
 
         .centro3{
     grid-area: c3;
     background-color: #F0C987;
     opacity: 0.5;
+    border-bottom-right-radius: 50vw;
     } 
     .centro4{
         grid-area: c4;
         background-color: #F0C987;
         opacity: 0.5;
+        border-bottom-left-radius: 50vw;
         } 
     
 
