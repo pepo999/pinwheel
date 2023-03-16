@@ -1,49 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-*{
+
+* {
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
     font-size: larger;
 }
 
 
-h1{
+h1 {
     font-family: 'Monoton', cursive;
     font-size: 2.5vw;
 }
 
-.grid-container{
+.grid-container {
     /* border: 1px solid green; */
     width: 100vw;
     height: 100vw;
     display: grid;
-    /* grid-template-columns: repeat(6, 1fr) ;
-    grid-template-rows: repeat(6, 1fr) ;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
-    ". . . . . . "
-    ". . . a1 . ." 
-    ". a4 a4 a1. ." 
-    ". . a3 a2 a2." 
-    ". . a3 . . ." 
-    ". . . . . ."; */
-    grid-template-columns: repeat(5, 1fr) ;
-    grid-template-rows: repeat(5, 1fr) ;
-    grid-template-areas:
-    ". . . c1 .  "
-    "c4 a4 a4 a1 . " 
-    ". a3 c a1 ." 
-    ". a3 a2 a2 c2" 
-    ". c3 . . . " ;
+        ". . . c1 .  "
+        "c4 a4 a4 a1 . "
+        ". a3 c a1 ."
+        ". a3 a2 a2 c2"
+        ". c3 . . . ";
     background-color: #AD91A3;
     background-image: url(./assets/yellowsubmarinecircle.png);
     background-position-x: left 42vw;
@@ -52,152 +45,159 @@ h1{
     background-size: 16vw;
 }
 
-.arm{
+.arm {
     /* border: 1px solid red; */
     justify-items: stretch;
-    background-color:#F0C987 ;
+    background-color: #F0C987;
     opacity: 0.5;
     overflow: hidden;
-    
+
 }
-.arm:hover{
+
+.arm:hover {
     opacity: 1;
 }
 
-.centro{
-grid-area: c;
-background-color: #F0C987;
-opacity: 0.5;
+.centro {
+    grid-area: c;
+    background-color: #F0C987;
+    opacity: 0.5;
 }
-        .centro1{
+
+.centro1 {
     grid-area: c1;
     background-color: #F0C987;
     opacity: 0.5;
     border-top-left-radius: 50vw;
-    } 
-    .centro2{
-        grid-area: c2;
-        background-color: #F0C987;
-        opacity: 0.5;
-        border-top-right-radius: 50vw;
-        } 
+}
 
-        .centro3{
+.centro2 {
+    grid-area: c2;
+    background-color: #F0C987;
+    opacity: 0.5;
+    border-top-right-radius: 50vw;
+}
+
+.centro3 {
     grid-area: c3;
     background-color: #F0C987;
     opacity: 0.5;
     border-bottom-right-radius: 50vw;
-    } 
-    .centro4{
-        grid-area: c4;
-        background-color: #F0C987;
-        opacity: 0.5;
-        border-bottom-left-radius: 50vw;
-        } 
-    
+}
 
-.a1{
+.centro4 {
+    grid-area: c4;
+    background-color: #F0C987;
+    opacity: 0.5;
+    border-bottom-left-radius: 50vw;
+}
+
+
+.a1 {
     grid-area: a1;
     display: flex;
     flex-direction: column;
     border-bottom-right-radius: 50vw;
-    padding: 0px;
-
 }
 
-.a2{
+.a2 {
     grid-area: a2;
     display: flex;
     flex-direction: row-reverse;
     border-bottom-left-radius: 50vw;
-    
+
 }
 
-.a3{
+.a3 {
     grid-area: a3;
     display: flex;
     flex-direction: column-reverse;
     border-top-left-radius: 50vw;
 }
 
-.a4{
+.a4 {
     grid-area: a4;
     display: flex;
     border-top-right-radius: 50vw;
 }
 
-.arm-img{
+.arm-img {
     width: 20vw;
     height: 20vw;
     /* border: 1px solid green; */
 }
 
-.arm-text{
+.arm-text {
     /* width: 16.66vw; */
     /* height: 16.66vw; */
     /* border: 1px solid yellow; */
     display: flex;
     flex-basis: 0;
     justify-content: space-around;
-    padding:3.5vw;
-    overflow: hidden;
+    /* overflow: hidden; */
+    padding: 3.5vw;
 }
 
 
 @media only screen and (max-width: 1000px) {
-    .grid-container{
+    .grid-container {
         gap: 1vw;
         width: 100vw;
         height: 200vw;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "a4 a4"
             "a3 a1"
             "a3 a1"
-            "a2 a2"; 
-            background-image: none; 
+            "a2 a2";
+        background-image: none;
     }
 
-    .arm-img{
+    .arm-img {
         width: 50vw;
         height: 50vw;
     }
-    
-    .arm-text{
+
+    .arm-text {
         width: 50vw;
         height: 50vw;
     }
-    
-    .arm{
+
+    .arm {
         opacity: 1;
     }
 
-    .arm-text{
+    .arm-text {
         width: 16.66vw;
         height: 16.66vw;
         /* border: 1px solid yellow; */
         display: flex;
         justify-content: center;
     }
-    .centro, .centro1, .centro2, .centro3, .centro4{
+
+    .centro,
+    .centro1,
+    .centro2,
+    .centro3,
+    .centro4 {
         background-color: transparent;
     }
 
-    h1{
+    h1 {
         font-size: 4vw;
-    }   
+    }
 }
 
 @media only screen and (max-width: 600px) {
 
 
-    .grid-container{
+    .grid-container {
         width: 100vw;
         height: 800vw;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(8, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "a1"
             "a1"
             "a2"
@@ -206,20 +206,20 @@ opacity: 0.5;
             "a4"
             "a3"
             "a3";
-            background-image: none;
+        background-image: none;
     }
 
-    .arm-img{
+    .arm-img {
         width: 100vw;
         height: 100vw;
     }
-    
-    .arm-text{
+
+    .arm-text {
         width: 100vw;
         height: 100vw;
     }
-    
-    .arm{
+
+    .arm {
         flex-direction: column;
         opacity: 1;
         border-top-right-radius: 0vw;
@@ -228,7 +228,7 @@ opacity: 0.5;
         border-bottom-left-radius: 0vw;
     }
 
-    h1{
+    h1 {
         font-size: 17vw;
-    }   
     }
+}
