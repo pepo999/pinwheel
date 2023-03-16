@@ -9,12 +9,17 @@ body{
  font-family: 'Poppins', sans-serif;
 }
 section{
-    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
     margin: auto;
     background-color: #F0C987;
     padding: 20px;
     padding-bottom: 100px;
     text-align: left;
+    border-top-right-radius: 40vw;
+    border-bottom-left-radius: 40vw;
+    padding: 12vw;
 }
 
 img{
