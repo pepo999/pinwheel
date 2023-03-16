@@ -43,6 +43,7 @@ h1 {
     background-position-y: top 41.5vw;
     background-repeat: no-repeat;
     background-size: 16vw;
+    padding: 50px;
 }
 
 .arm {
@@ -51,7 +52,6 @@ h1 {
     background-color: #F0C987;
     opacity: 0.5;
     overflow: hidden;
-
 }
 
 .arm:hover {
@@ -125,6 +125,7 @@ h1 {
     width: 20vw;
     height: 20vw;
     /* border: 1px solid green; */
+    
 }
 
 .arm-text {
