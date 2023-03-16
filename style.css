@@ -114,7 +114,6 @@ opacity: 0.5;
     display: flex;
     flex-direction: column-reverse;
     border-top-left-radius: 50vw;
-
 }
 
 .a4{
@@ -140,9 +139,10 @@ opacity: 0.5;
     overflow: hidden;
 }
 
+
 @media only screen and (max-width: 1000px) {
     .grid-container{
-        gap: 2vw;
+        gap: 1vw;
         width: 100vw;
         height: 200vw;
         grid-template-columns: repeat(2, 1fr);
@@ -167,10 +167,6 @@ opacity: 0.5;
     
     .arm{
         opacity: 1;
-        border-top-right-radius: 0vw;
-        border-top-left-radius: 0vw;
-        border-bottom-right-radius: 0vw;
-        border-bottom-left-radius: 0vw;
     }
 
     .arm-text{
@@ -178,12 +174,15 @@ opacity: 0.5;
         height: 16.66vw;
         /* border: 1px solid yellow; */
         display: flex;
-        /* flex-basis: 0; */
         justify-content: center;
     }
     .centro, .centro1, .centro2, .centro3, .centro4{
         background-color: transparent;
     }
+
+    h1{
+        font-size: 4vw;
+    }   
 }
 
 @media only screen and (max-width: 600px) {
@@ -219,10 +218,13 @@ opacity: 0.5;
     .arm{
         flex-direction: column;
         opacity: 1;
+        border-top-right-radius: 0vw;
+        border-top-left-radius: 0vw;
+        border-bottom-right-radius: 0vw;
+        border-bottom-left-radius: 0vw;
     }
 
     h1{
         font-size: 17vw;
-        
     }   
     }
